@@ -1,1 +1,1 @@
-# SKSpriteButtonNode
+# SKButtonNode
