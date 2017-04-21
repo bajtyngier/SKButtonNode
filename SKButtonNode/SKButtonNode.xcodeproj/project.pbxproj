@@ -11,9 +11,10 @@
 		71970E331EAA08D600D1F7A7 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71970E321EAA08D600D1F7A7 /* GameScene.swift */; };
 		71970E351EAA08D600D1F7A7 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71970E341EAA08D600D1F7A7 /* GameViewController.swift */; };
 		71970E381EAA08D600D1F7A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71970E361EAA08D600D1F7A7 /* Main.storyboard */; };
-		71970E3A1EAA08D600D1F7A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71970E391EAA08D600D1F7A7 /* Assets.xcassets */; };
 		71970E3D1EAA08D600D1F7A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71970E3B1EAA08D600D1F7A7 /* LaunchScreen.storyboard */; };
 		71970E481EAA08D600D1F7A7 /* SKButtonNodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71970E471EAA08D600D1F7A7 /* SKButtonNodeTests.swift */; };
+		71970E531EAA0A2300D1F7A7 /* SKButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71970E521EAA0A2300D1F7A7 /* SKButtonNode.swift */; };
+		71970E571EAA309100D1F7A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71970E561EAA309100D1F7A7 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,12 +33,13 @@
 		71970E321EAA08D600D1F7A7 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		71970E341EAA08D600D1F7A7 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		71970E371EAA08D600D1F7A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		71970E391EAA08D600D1F7A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71970E3C1EAA08D600D1F7A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		71970E3E1EAA08D600D1F7A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71970E431EAA08D600D1F7A7 /* SKButtonNodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SKButtonNodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		71970E471EAA08D600D1F7A7 /* SKButtonNodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKButtonNodeTests.swift; sourceTree = "<group>"; };
 		71970E491EAA08D600D1F7A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71970E521EAA0A2300D1F7A7 /* SKButtonNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKButtonNode.swift; sourceTree = "<group>"; };
+		71970E561EAA309100D1F7A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,13 +81,10 @@
 		71970E2B1EAA08D600D1F7A7 /* SKButtonNode */ = {
 			isa = PBXGroup;
 			children = (
-				71970E2C1EAA08D600D1F7A7 /* AppDelegate.swift */,
+				71970E521EAA0A2300D1F7A7 /* SKButtonNode.swift */,
 				71970E321EAA08D600D1F7A7 /* GameScene.swift */,
-				71970E341EAA08D600D1F7A7 /* GameViewController.swift */,
-				71970E361EAA08D600D1F7A7 /* Main.storyboard */,
-				71970E391EAA08D600D1F7A7 /* Assets.xcassets */,
-				71970E3B1EAA08D600D1F7A7 /* LaunchScreen.storyboard */,
-				71970E3E1EAA08D600D1F7A7 /* Info.plist */,
+				71970E541EAA2F0500D1F7A7 /* Core */,
+				71970E551EAA2F1400D1F7A7 /* Resources */,
 			);
 			path = SKButtonNode;
 			sourceTree = "<group>";
@@ -97,6 +96,26 @@
 				71970E491EAA08D600D1F7A7 /* Info.plist */,
 			);
 			path = SKButtonNodeTests;
+			sourceTree = "<group>";
+		};
+		71970E541EAA2F0500D1F7A7 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				71970E2C1EAA08D600D1F7A7 /* AppDelegate.swift */,
+				71970E341EAA08D600D1F7A7 /* GameViewController.swift */,
+				71970E361EAA08D600D1F7A7 /* Main.storyboard */,
+				71970E3B1EAA08D600D1F7A7 /* LaunchScreen.storyboard */,
+				71970E3E1EAA08D600D1F7A7 /* Info.plist */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		71970E551EAA2F1400D1F7A7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				71970E561EAA309100D1F7A7 /* Assets.xcassets */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,7 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71970E381EAA08D600D1F7A7 /* Main.storyboard in Resources */,
-				71970E3A1EAA08D600D1F7A7 /* Assets.xcassets in Resources */,
+				71970E571EAA309100D1F7A7 /* Assets.xcassets in Resources */,
 				71970E3D1EAA08D600D1F7A7 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71970E331EAA08D600D1F7A7 /* GameScene.swift in Sources */,
+				71970E531EAA0A2300D1F7A7 /* SKButtonNode.swift in Sources */,
 				71970E351EAA08D600D1F7A7 /* GameViewController.swift in Sources */,
 				71970E2D1EAA08D600D1F7A7 /* AppDelegate.swift in Sources */,
 			);
