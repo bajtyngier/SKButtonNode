@@ -1,0 +1,430 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		71970E2D1EAA08D600D1F7A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71970E2C1EAA08D600D1F7A7 /* AppDelegate.swift */; };
+		71970E331EAA08D600D1F7A7 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71970E321EAA08D600D1F7A7 /* GameScene.swift */; };
+		71970E351EAA08D600D1F7A7 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71970E341EAA08D600D1F7A7 /* GameViewController.swift */; };
+		71970E381EAA08D600D1F7A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71970E361EAA08D600D1F7A7 /* Main.storyboard */; };
+		71970E3A1EAA08D600D1F7A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71970E391EAA08D600D1F7A7 /* Assets.xcassets */; };
+		71970E3D1EAA08D600D1F7A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71970E3B1EAA08D600D1F7A7 /* LaunchScreen.storyboard */; };
+		71970E481EAA08D600D1F7A7 /* SKButtonNodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71970E471EAA08D600D1F7A7 /* SKButtonNodeTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		71970E441EAA08D600D1F7A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 71970E211EAA08D600D1F7A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 71970E281EAA08D600D1F7A7;
+			remoteInfo = SKButtonNode;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		71970E291EAA08D600D1F7A7 /* SKButtonNode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKButtonNode.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		71970E2C1EAA08D600D1F7A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		71970E321EAA08D600D1F7A7 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		71970E341EAA08D600D1F7A7 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		71970E371EAA08D600D1F7A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		71970E391EAA08D600D1F7A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		71970E3C1EAA08D600D1F7A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		71970E3E1EAA08D600D1F7A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71970E431EAA08D600D1F7A7 /* SKButtonNodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SKButtonNodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		71970E471EAA08D600D1F7A7 /* SKButtonNodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKButtonNodeTests.swift; sourceTree = "<group>"; };
+		71970E491EAA08D600D1F7A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		71970E261EAA08D600D1F7A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71970E401EAA08D600D1F7A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		71970E201EAA08D600D1F7A7 = {
+			isa = PBXGroup;
+			children = (
+				71970E2B1EAA08D600D1F7A7 /* SKButtonNode */,
+				71970E461EAA08D600D1F7A7 /* SKButtonNodeTests */,
+				71970E2A1EAA08D600D1F7A7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		71970E2A1EAA08D600D1F7A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				71970E291EAA08D600D1F7A7 /* SKButtonNode.app */,
+				71970E431EAA08D600D1F7A7 /* SKButtonNodeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		71970E2B1EAA08D600D1F7A7 /* SKButtonNode */ = {
+			isa = PBXGroup;
+			children = (
+				71970E2C1EAA08D600D1F7A7 /* AppDelegate.swift */,
+				71970E321EAA08D600D1F7A7 /* GameScene.swift */,
+				71970E341EAA08D600D1F7A7 /* GameViewController.swift */,
+				71970E361EAA08D600D1F7A7 /* Main.storyboard */,
+				71970E391EAA08D600D1F7A7 /* Assets.xcassets */,
+				71970E3B1EAA08D600D1F7A7 /* LaunchScreen.storyboard */,
+				71970E3E1EAA08D600D1F7A7 /* Info.plist */,
+			);
+			path = SKButtonNode;
+			sourceTree = "<group>";
+		};
+		71970E461EAA08D600D1F7A7 /* SKButtonNodeTests */ = {
+			isa = PBXGroup;
+			children = (
+				71970E471EAA08D600D1F7A7 /* SKButtonNodeTests.swift */,
+				71970E491EAA08D600D1F7A7 /* Info.plist */,
+			);
+			path = SKButtonNodeTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		71970E281EAA08D600D1F7A7 /* SKButtonNode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71970E4C1EAA08D600D1F7A7 /* Build configuration list for PBXNativeTarget "SKButtonNode" */;
+			buildPhases = (
+				71970E251EAA08D600D1F7A7 /* Sources */,
+				71970E261EAA08D600D1F7A7 /* Frameworks */,
+				71970E271EAA08D600D1F7A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SKButtonNode;
+			productName = SKButtonNode;
+			productReference = 71970E291EAA08D600D1F7A7 /* SKButtonNode.app */;
+			productType = "com.apple.product-type.application";
+		};
+		71970E421EAA08D600D1F7A7 /* SKButtonNodeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71970E4F1EAA08D600D1F7A7 /* Build configuration list for PBXNativeTarget "SKButtonNodeTests" */;
+			buildPhases = (
+				71970E3F1EAA08D600D1F7A7 /* Sources */,
+				71970E401EAA08D600D1F7A7 /* Frameworks */,
+				71970E411EAA08D600D1F7A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				71970E451EAA08D600D1F7A7 /* PBXTargetDependency */,
+			);
+			name = SKButtonNodeTests;
+			productName = SKButtonNodeTests;
+			productReference = 71970E431EAA08D600D1F7A7 /* SKButtonNodeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		71970E211EAA08D600D1F7A7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Konrad Bajtyngier";
+				TargetAttributes = {
+					71970E281EAA08D600D1F7A7 = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = EA5YX6X8AN;
+						ProvisioningStyle = Automatic;
+					};
+					71970E421EAA08D600D1F7A7 = {
+						CreatedOnToolsVersion = 8.3.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 71970E281EAA08D600D1F7A7;
+					};
+				};
+			};
+			buildConfigurationList = 71970E241EAA08D600D1F7A7 /* Build configuration list for PBXProject "SKButtonNode" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 71970E201EAA08D600D1F7A7;
+			productRefGroup = 71970E2A1EAA08D600D1F7A7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				71970E281EAA08D600D1F7A7 /* SKButtonNode */,
+				71970E421EAA08D600D1F7A7 /* SKButtonNodeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		71970E271EAA08D600D1F7A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71970E381EAA08D600D1F7A7 /* Main.storyboard in Resources */,
+				71970E3A1EAA08D600D1F7A7 /* Assets.xcassets in Resources */,
+				71970E3D1EAA08D600D1F7A7 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71970E411EAA08D600D1F7A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		71970E251EAA08D600D1F7A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71970E331EAA08D600D1F7A7 /* GameScene.swift in Sources */,
+				71970E351EAA08D600D1F7A7 /* GameViewController.swift in Sources */,
+				71970E2D1EAA08D600D1F7A7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71970E3F1EAA08D600D1F7A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71970E481EAA08D600D1F7A7 /* SKButtonNodeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		71970E451EAA08D600D1F7A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 71970E281EAA08D600D1F7A7 /* SKButtonNode */;
+			targetProxy = 71970E441EAA08D600D1F7A7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		71970E361EAA08D600D1F7A7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				71970E371EAA08D600D1F7A7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		71970E3B1EAA08D600D1F7A7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				71970E3C1EAA08D600D1F7A7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		71970E4A1EAA08D600D1F7A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		71970E4B1EAA08D600D1F7A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		71970E4D1EAA08D600D1F7A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EA5YX6X8AN;
+				INFOPLIST_FILE = SKButtonNode/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.koba.utils.SKButtonNode;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		71970E4E1EAA08D600D1F7A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EA5YX6X8AN;
+				INFOPLIST_FILE = SKButtonNode/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.koba.utils.SKButtonNode;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		71970E501EAA08D600D1F7A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SKButtonNodeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.koba.utils.SKButtonNodeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SKButtonNode.app/SKButtonNode";
+			};
+			name = Debug;
+		};
+		71970E511EAA08D600D1F7A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SKButtonNodeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.koba.utils.SKButtonNodeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SKButtonNode.app/SKButtonNode";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		71970E241EAA08D600D1F7A7 /* Build configuration list for PBXProject "SKButtonNode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71970E4A1EAA08D600D1F7A7 /* Debug */,
+				71970E4B1EAA08D600D1F7A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		71970E4C1EAA08D600D1F7A7 /* Build configuration list for PBXNativeTarget "SKButtonNode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71970E4D1EAA08D600D1F7A7 /* Debug */,
+				71970E4E1EAA08D600D1F7A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		71970E4F1EAA08D600D1F7A7 /* Build configuration list for PBXNativeTarget "SKButtonNodeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71970E501EAA08D600D1F7A7 /* Debug */,
+				71970E511EAA08D600D1F7A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 71970E211EAA08D600D1F7A7 /* Project object */;
+}
