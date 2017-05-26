@@ -45,7 +45,7 @@ public class SKButtonNode: SKNode {
 		}
 	}
 	
-	//MARK: - Computed
+	//MARK: - Computed properties
 	
 	public var title:String? {
 		return titleLabel?.text

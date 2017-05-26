@@ -16,8 +16,6 @@ class GameScene: SKScene {
 	
 	override func didMove(to view: SKView) {
 		
-		
-		
 		//Exmaple 1 - simple example with texture and text
 		
 		let button1 = SKButtonNode(texture: texture1) {
