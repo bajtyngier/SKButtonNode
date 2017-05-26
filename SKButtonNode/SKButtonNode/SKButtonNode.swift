@@ -22,13 +22,13 @@
 
 import SpriteKit
 
-///Corresponds to button's current control state. Very much like UIControlState in case of UIButton.
+///Corresponds to button's current control state. Very much like `UIControlState` in case of `UIButton`.
 public enum SKButtonNodeState {
 	case normal
 	case highlighted
 }
 
-///Simple implementation of button for SpriteKit. Derives much of its concepts from UIKit's UIButton.
+///Simple implementation of button for `SpriteKit`. Derives much of its concepts from `UIKit`'s `UIButton`.
 public class SKButtonNode: SKNode {
 	
 	//MARK: - Public
@@ -68,9 +68,9 @@ public class SKButtonNode: SKNode {
 	
 	/**
 	Creates a button with a texture generated from the specified image.
-	- parameter imageNamed: name of the image from assets catalog
-	- parameter title: button's label text
-	- parameter action: closure to be called as the button's action
+	- parameter imageNamed: Name of the image from assets catalog.
+	- parameter title: Button's label text.
+	- parameter action: Closure to be called as the button's action.
 	*/
 	convenience init(imageNamed:String, title:String? = nil, action:(()->())? = nil) {
 		let texture = SKTexture(imageNamed: imageNamed)
@@ -78,11 +78,11 @@ public class SKButtonNode: SKNode {
 	}
 	
 	/**
-	Failing initializer that creates a button with a texture generated from the passed SKShapeNode.
-	- parameter view: the SKView instance to be used for generating a texture from shape node
-	- parameter shape: the shape that will be used to generate a texture from
-	- parameter title: button's label text
-	- parameter action: closure to be called as the button's action
+	Failing initializer that creates a button with a texture generated from the passed `SKShapeNode`.
+	- parameter view: The `SKView` instance to be used for generating a texture from shape node.
+	- parameter shape: The shape that will be used to generate a texture from.
+	- parameter title: Button's `titleLabel` text.
+	- parameter action: Closure to be called as the button's action.
 	*/
 	convenience init?(view:SKView, shape:SKShapeNode, title:String? = nil, action:(()->())? = nil) {
 		guard let texture = view.texture(from: shape) else { return nil }
@@ -91,9 +91,9 @@ public class SKButtonNode: SKNode {
 	
 	/**
 	Creates a button with a passed texture.
-	- parameter texture: texture object, which will make up the button
-	- parameter title: button's label text
-	- parameter action: closure to be called as the button's action
+	- parameter texture: Texture object, which will make up the button.
+	- parameter title: Button's `titleLabel` text.
+	- parameter action: Closure to be called as the button's action.
 	*/
 	init(texture:SKTexture, title:String? = nil, action:(()->())? = nil) {
 		self.sprite = SKSpriteNode(texture: texture)
@@ -110,7 +110,7 @@ public class SKButtonNode: SKNode {
 	}
 	
 	private func updateState() {
-		//Determine current state of the button
+		//Determine current state of the button.
 		var currentState:State
 		switch self.state {
 		case .highlighted:
@@ -118,20 +118,21 @@ public class SKButtonNode: SKNode {
 		default:
 			currentState = normalState
 		}
-		//Update the button to match the current state
+		//Update the button to match the current state.
 		sprite.texture = currentState.texture
 		titleLabel?.fontColor = currentState.fontColor
+		alpha = currentState.alpha
 	}
 	
 	//MARK: - Texture
 	
-	///Takes the image name and created a texture to further update the specified state with
+	///Takes the image name and created a texture to further update the specified state with.
 	public func setImage(named:String, for state:SKButtonNodeState) {
 		let texture = SKTexture(imageNamed: named)
 		setTexture(texture, for: state)
 	}
 	
-	///Update the specified state with the specified texture
+	///Update the specified state with the specified texture.
 	public func setTexture(_ texture:SKTexture, for state:SKButtonNodeState) {
 		switch state {
 		case .normal:
@@ -148,6 +149,10 @@ public class SKButtonNode: SKNode {
 	
 	//MARK: - Title Text
 	
+	/**
+	Update the button's titleLabel text.
+	- parameter title: String, which the `titleLabel` text should be updated to. If the value is `nil`, the label node will be removed.
+	*/
 	public func setTitle(_ title:String?) {
 		//If the title is empty, the label child is removed
 		guard let title = title, title != "" else {
@@ -161,15 +166,21 @@ public class SKButtonNode: SKNode {
 		}
 		//If the title was previously empty, create a new label
 		else {
-			titleLabel = SKLabelNode(text: title)
-			titleLabel!.verticalAlignmentMode = .center
-			titleLabel!.zPosition = 1
+			titleLabel = generateTitleLabel(text: title)
 			addChild(titleLabel!)
 		}
 	}
 	
-	//MARK: - Title Color
+	private func generateTitleLabel(text:String) -> SKLabelNode {
+		let titleLabel = SKLabelNode(text: text)
+		titleLabel.verticalAlignmentMode = .center
+		titleLabel.zPosition = 1
+		return titleLabel
+	}
 	
+	//MARK: - State Styling
+	
+	///Set button's `titleLabel` text color.
 	public func setTitleColor(_ color:SKColor, for state:SKButtonNodeState) {
 		switch state {
 		case .normal:
@@ -179,6 +190,24 @@ public class SKButtonNode: SKNode {
 				highlightedState!.fontColor = color
 			} else {
 				highlightedState = State(texture: normalState.texture, fontColor: color)
+			}
+		}
+		updateState()
+	}
+	
+	/**
+	Set button's alpha value.
+	- parameter alpha: Value from `0.0` to `1.0`. Default is `1.0`.
+	*/
+	public func setAlpha(_ alpha:CGFloat, for state:SKButtonNodeState) {
+		switch state {
+		case .normal:
+			normalState.alpha = alpha
+		case .highlighted:
+			if let _ = highlightedState {
+				highlightedState!.alpha = alpha
+			} else {
+				highlightedState = State(texture: normalState.texture, alpha: alpha)
 			}
 		}
 		updateState()
@@ -220,18 +249,20 @@ public class SKButtonNode: SKNode {
 	
 	//MARK: - Button State
 	
-	///State struct represents a certain state of a SKButtonNode. Each state can have its own SKTexture and font color.
+	///State struct represents a certain state of a `SKButtonNode`. Each state can have its own `SKTexture` and font color.
 	private struct State {
 		
 		var texture:SKTexture?
+		var alpha:CGFloat = 1.0
 		var fontColor:SKColor = SKColor.white
 		
-		init(texture:SKTexture?) {
+		init(texture:SKTexture?, alpha:CGFloat = 1.0) {
 			self.texture = texture
+			self.alpha = alpha
 		}
 		
-		init(texture:SKTexture?, fontColor:SKColor) {
-			self.texture = texture
+		init(texture:SKTexture?, fontColor:SKColor, alpha:CGFloat = 1.0) {
+			self.init(texture: texture, alpha: alpha)
 			self.fontColor = fontColor
 		}
 		

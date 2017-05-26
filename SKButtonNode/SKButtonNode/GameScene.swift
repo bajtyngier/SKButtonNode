@@ -53,6 +53,7 @@ class GameScene: SKScene {
 				print("Button 3 pressed!")
 			}
 			button3.setTitleColor(SKColor.black, for: .highlighted)
+			button3.setAlpha(0.5, for: .highlighted)
 			button3.position = CGPoint(x: view.frame.midX, y: view.frame.height-350)
 			addChild(button3)
 		}
