@@ -435,6 +435,7 @@
 				71970E4E1EAA08D600D1F7A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		71970E4F1EAA08D600D1F7A7 /* Build configuration list for PBXNativeTarget "SKButtonNodeTests" */ = {
 			isa = XCConfigurationList;
@@ -443,6 +444,7 @@
 				71970E511EAA08D600D1F7A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
