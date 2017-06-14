@@ -26,6 +26,7 @@ import SpriteKit
 public enum SKButtonNodeState {
 	case normal
 	case highlighted
+	case disabled
 }
 
 ///Simple implementation of button for `SpriteKit`. Derives much of its concepts from `UIKit`'s `UIButton`.
@@ -34,14 +35,23 @@ public class SKButtonNode: SKNode {
 	//MARK: - Public
 	
 	public var action:(()->())?
-	public var enabled = true
+	public var enabled:Bool {
+		get {
+			return state != .disabled
+		}
+		set {
+			state = newValue ? .normal : .disabled
+		}
+	}
 	
 	//MARK: - Private(set)
 	
 	private(set) var titleLabel:SKLabelNode?
 	private(set) var state:SKButtonNodeState = .normal {
 		didSet {
-			updateState()
+			if state != oldValue {
+				updateState()
+			}
 		}
 	}
 	
@@ -63,6 +73,7 @@ public class SKButtonNode: SKNode {
 	private var activated = false
 	private var normalState:State
 	private var highlightedState:State?
+	private var disabledState:State?
 	
 	//MARK: - Initialization
 	
@@ -115,6 +126,8 @@ public class SKButtonNode: SKNode {
 		switch self.state {
 		case .highlighted:
 			currentState = highlightedState ?? normalState
+		case .disabled:
+			currentState = disabledState ?? normalState
 		default:
 			currentState = normalState
 		}
@@ -142,6 +155,12 @@ public class SKButtonNode: SKNode {
 				highlightedState!.texture = texture
 			} else {
 				highlightedState = State(texture: texture, fontColor: normalState.fontColor)
+			}
+		case .disabled:
+			if let _ = disabledState {
+				disabledState!.texture = texture
+			} else {
+				disabledState = State(texture: texture, fontColor: normalState.fontColor)
 			}
 		}
 		updateState()
@@ -191,6 +210,12 @@ public class SKButtonNode: SKNode {
 			} else {
 				highlightedState = State(texture: normalState.texture, fontColor: color)
 			}
+		case .disabled:
+			if let _ = disabledState {
+				disabledState!.fontColor = color
+			} else {
+				disabledState = State(texture: normalState.texture, fontColor: color)
+			}
 		}
 		updateState()
 	}
@@ -208,6 +233,12 @@ public class SKButtonNode: SKNode {
 				highlightedState!.alpha = alpha
 			} else {
 				highlightedState = State(texture: normalState.texture, alpha: alpha)
+			}
+		case .disabled:
+			if let _ = disabledState {
+				disabledState!.alpha = alpha
+			} else {
+				disabledState = State(texture: normalState.texture, alpha: alpha)
 			}
 		}
 		updateState()
