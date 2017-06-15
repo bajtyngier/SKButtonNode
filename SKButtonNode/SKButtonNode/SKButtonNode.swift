@@ -44,6 +44,26 @@ public class SKButtonNode: SKNode {
 		}
 	}
 	
+	//MARK: - Public properties derived from `SKSpriteNode`
+	
+	public var size:CGSize {
+		get {
+			return sprite.size
+		}
+		set {
+			sprite.size = newValue
+		}
+	}
+	
+	public var anchorPoint:CGPoint {
+		get {
+			return sprite.anchorPoint
+		}
+		set {
+			sprite.anchorPoint = newValue
+		}
+	}
+	
 	//MARK: - Private(set)
 	
 	private(set) var titleLabel:SKLabelNode?
@@ -62,9 +82,6 @@ public class SKButtonNode: SKNode {
 	}
 	public var currentTexture:SKTexture? {
 		return sprite.texture
-	}
-	public var size:CGSize {
-		return sprite.size
 	}
 	
 	//MARK: - Private
@@ -90,13 +107,12 @@ public class SKButtonNode: SKNode {
 	
 	/**
 	Failing initializer that creates a button with a texture generated from the passed `SKShapeNode`.
-	- parameter view: The `SKView` instance to be used for generating a texture from shape node.
 	- parameter shape: The shape that will be used to generate a texture from.
 	- parameter title: Button's `titleLabel` text.
 	- parameter action: Closure to be called as the button's action.
 	*/
-	convenience init?(view:SKView, shape:SKShapeNode, title:String? = nil, action:(()->())? = nil) {
-		guard let texture = view.texture(from: shape) else { return nil }
+	convenience init?(shape:SKShapeNode, title:String? = nil, action:(()->())? = nil) {
+		guard let texture = SKView().texture(from: shape) else { return nil }
 		self.init(texture: texture, title: title, action: action)
 	}
 	
@@ -273,8 +289,8 @@ public class SKButtonNode: SKNode {
 	
 	private func runAction() {
 		if enabled && state == .highlighted {
-			action?()
 			state = .normal
+			action?()
 		}
 	}
 	
