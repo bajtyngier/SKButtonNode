@@ -55,6 +55,15 @@ public class SKButtonNode: SKNode {
 		}
 	}
 	
+	public var texture:SKTexture? {
+		get {
+			return sprite.texture
+		}
+		set {
+			sprite.texture = newValue
+		}
+	}
+	
 	public var anchorPoint:CGPoint {
 		get {
 			return sprite.anchorPoint
@@ -79,9 +88,6 @@ public class SKButtonNode: SKNode {
 	
 	public var title:String? {
 		return titleLabel?.text
-	}
-	public var currentTexture:SKTexture? {
-		return sprite.texture
 	}
 	
 	//MARK: - Private
