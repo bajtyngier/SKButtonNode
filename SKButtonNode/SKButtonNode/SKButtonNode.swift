@@ -157,6 +157,7 @@ public class SKButtonNode: SKNode {
 		sprite.texture = currentState.texture
 		titleLabel?.fontColor = currentState.fontColor
 		alpha = currentState.alpha
+		currentState.styling?()
 	}
 	
 	//MARK: - Texture
@@ -266,6 +267,31 @@ public class SKButtonNode: SKNode {
 		updateState()
 	}
 	
+	/**
+	Set a styling closure, which will be called on the button.
+	This feature enables you to perform any custom alterations to the button.
+	- parameter styling: Closure that performs any custom changes on the button for a given state.
+	*/
+	public func setStyling(_ forState:SKButtonNodeState, styling:(()->())?) {
+		switch state {
+		case .normal:
+			normalState.styling = styling
+		case .highlighted:
+			if let _ = highlightedState {
+				highlightedState!.styling = styling
+			} else {
+				highlightedState = State(texture: normalState.texture, styling: styling)
+			}
+		case .disabled:
+			if let _ = disabledState {
+				disabledState!.styling = styling
+			} else {
+				disabledState = State(texture: normalState.texture, styling: styling)
+			}
+		}
+		updateState()
+	}
+	
 	//MARK: - User Interaction Handling
 	
 	override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -308,14 +334,15 @@ public class SKButtonNode: SKNode {
 		var texture:SKTexture?
 		var alpha:CGFloat = 1.0
 		var fontColor:SKColor = SKColor.white
+		var styling:(()->())?
 		
-		init(texture:SKTexture?, alpha:CGFloat = 1.0) {
+		init(texture:SKTexture?, alpha:CGFloat = 1.0, styling:(()->())? = nil) {
 			self.texture = texture
 			self.alpha = alpha
 		}
 		
-		init(texture:SKTexture?, fontColor:SKColor, alpha:CGFloat = 1.0) {
-			self.init(texture: texture, alpha: alpha)
+		init(texture:SKTexture?, fontColor:SKColor, alpha:CGFloat = 1.0, styling:(()->())? = nil) {
+			self.init(texture: texture, alpha: alpha, styling: styling)
 			self.fontColor = fontColor
 		}
 		
